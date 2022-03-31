@@ -1,0 +1,11 @@
+pip install fastapi[all]
+pip install uvicorn[standard]
+pip install sqlalchemy
+pip install  psycopg2-binary 
+pip install  "passlib[bcrypt]"
+pip install python-multipart 
+pip install pydantic[email]
+pip install fastapi_mail
+
+#lệnh chạy api
+uvicorn main:app --host 0.0.0.0 --port 8000 
