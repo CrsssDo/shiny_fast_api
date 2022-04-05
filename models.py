@@ -1,4 +1,3 @@
-from numpy import product
 from database import Base
 from sqlalchemy import String,Boolean,Integer,Column
 

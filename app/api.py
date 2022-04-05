@@ -6,11 +6,21 @@ import schemas
 import models
 from hashing import Hasher
 import action
+from fastapi.middleware.cors import CORSMiddleware
 
 db = SessionLocal()
 
+origins = ["*"]
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def about():
